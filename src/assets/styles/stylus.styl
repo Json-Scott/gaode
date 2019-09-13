@@ -1,0 +1,38 @@
+
+px2rem($px){
+    return $px / 100 rem
+}
+
+ellipsis() {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis
+}
+
+ellipsisMore($line){
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line;
+    white-space:normal;
+    word-break:break-all;
+    word-wrap:break-word;
+    overflow: hidden;
+}
+shadowBox() {
+    box-shadow: 0px 0px px2rem(6) 0px rgba(0, 0, 0, 0.26);
+}
+shadowBoxReset($r, $g, $b, $alpha) {
+    box-shadow: 0px 0px px2rem(6) 0px rgba($r, $g, $b, $alpha);
+}
+gradient($color1, $color2) {
+    background: -webkit-linear-gradient($color1, $color2); /* Safari 5.1 - 6.0 */
+    // background: -o-linear-gradient($color1, $color2); /* Opera 11.1 - 12.0 */
+    // background: -moz-linear-gradient($color1, $color2);
+    // background: linear-gradient($color1, $color2);
+}
+gradientlr($derection ,$color1, $color2) {
+    background: -webkit-linear-gradient($derection, $color1, $color2); /* Safari 5.1 - 6.0 */
+    // background: -o-linear-gradient($color1, $color2); /* Opera 11.1 - 12.0 */
+    // background: -moz-linear-gradient($color1, $color2);
+    // background: linear-gradient($color1, $color2);
+}
